@@ -1,0 +1,6 @@
+---
+- name: Ensure vhost.root exists
+  file:
+    path: "{{ item.root }}"
+    state: directory
+  with_items: "{{ nginx_vhosts }}"
